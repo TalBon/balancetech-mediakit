@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BalanceTech — Media Kit 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f8ff;
+    --bg2: #ffffff;
+    --card-dark: #111827;
+    --card-mid: #1e2d45;
+    --accent: #3b82f6;
+    --accent2: #60a5fa;
+    --accent-light: rgba(59,130,246,0.10);
+    --accent-border: rgba(59,130,246,0.25);
+    --text: #0f172a;
+    --muted: #64748b;
+    --white: #ffffff;
+    --border: #e2e8f0;
+    --dark-text: #f0f6ff;
+    --dark-muted: #94a3b8;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  @media print {
+    .page { page-break-after: always; break-after: page; }
+    .page:last-child { page-break-after: avoid; }
+  }
+
+  /* PAGES */
+  .page {
+    width: 1440px;
+    min-height: 900px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 56px 80px;
+    background: var(--bg2);
+    border-bottom: 2px solid var(--border);
+  }
+  .page-dark {
+    background: var(--card-dark);
+    color: var(--dark-text);
+  }
+  .page-blue-tint {
+    background: linear-gradient(160deg, #eef4ff 0%, #f8faff 50%, #ffffff 100%);
+  }
+
+  /* BLOB */
+  .blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .page > * { position: relative; z-index: 1; }
+
+  /* LOGO */
+  .logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    letter-spacing: -0.3px;
+  }
+  .logo-light { color: var(--white); }
+  .logo .dot { color: var(--accent); font-size: 28px; line-height: 0; margin-bottom: -2px; }
+  .logo .tech { color: var(--accent); }
+
+  /* LABELS */
+  .page-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+  .chapter-pill {
+    display: inline-flex;
+    align-items: center;
+    background: var(--accent-light);
+    color: var(--accent);
+    border: 1px solid var(--accent-border);
+    border-radius: 50px;
+    padding: 5px 16px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  .chapter-pill-dark {
+    background: rgba(59,130,246,0.15);
+    color: var(--accent2);
+    border-color: rgba(96,165,250,0.3);
+  }
+
+  /* TYPOGRAPHY */
+  h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: 68px;
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -2.5px;
+    color: var(--text);
+  }
+  h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    color: var(--text);
+  }
+  h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  .h1-dark { color: var(--white); }
+  .h2-dark { color: var(--white); }
+  .h3-dark { color: var(--white); }
+  .accent-word { color: var(--accent); }
+
+  .lead {
+    font-size: 17px;
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 600px;
+    margin-top: 16px;
+  }
+  .lead-dark { color: var(--dark-muted); }
+
+  /* CARDS */
+  .card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px;
+  }
+  .card-dark {
+    background: #1a2640;
+    border: 1px solid rgba(59,130,246,0.2);
+    border-radius: 14px;
+    padding: 28px;
+  }
+  .card-accent {
+    background: linear-gradient(135deg, rgba(59,130,246,0.12) 0%, rgba(59,130,246,0.04) 100%);
+    border: 1px solid var(--accent-border);
+    border-radius: 14px;
+    padding: 28px;
+  }
+  .card-stat-dark {
+    background: #111827;
+    border: 1px solid rgba(59,130,246,0.25);
+    border-radius: 14px;
+    padding: 28px 24px;
+  }
+
+  /* STAT */
+  .stat-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--accent2);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .stat-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--dark-muted);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+  }
+  .stat-desc { font-size: 13px; color: var(--dark-muted); line-height: 1.5; }
+
+  /* GRIDS */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+  .grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 18px; }
+
+  /* NUM BADGE */
+  .num-badge {
+    width: 36px; height: 36px;
+    background: var(--accent);
+    border-radius: 9px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Syne', sans-serif;
+    font-size: 14px; font-weight: 800;
+    color: white; flex-shrink: 0;
+    margin-bottom: 14px;
+  }
+
+  /* ICON BOX */
+  .icon-box {
+    width: 44px; height: 44px;
+    background: var(--accent-light);
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    margin-bottom: 14px;
+    flex-shrink: 0;
+  }
+
+  /* CHECK */
+  .check-list { display: flex; flex-direction: column; gap: 11px; }
+  .check-item { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--dark-muted); line-height: 1.5; }
+  .check-dot { width: 18px; height: 18px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; color: white; flex-shrink: 0; margin-top: 2px; }
+
+  /* QUOTE */
+  .quote-card {
+    background: linear-gradient(135deg,rgba(59,130,246,0.1),rgba(59,130,246,0.03));
+    border: 1px solid var(--accent-border);
+    border-radius: 12px;
+    padding: 22px 26px;
+  }
+  .quote-text { font-family:'Syne',sans-serif; font-size:15px; font-weight:600; color:var(--text); line-height:1.5; margin-bottom:8px; }
+  .quote-source { font-size:11px; color:var(--accent); text-transform:uppercase; letter-spacing:1.5px; font-weight:600; }
+
+  /* PILL TAGS */
+  .pill { display:inline-block; background:rgba(59,130,246,0.1); color:var(--accent); border:1px solid var(--accent-border); border-radius:50px; padding:4px 12px; font-size:11px; font-weight:600; letter-spacing:0.5px; }
+  .pill-dark { background:rgba(96,165,250,0.15); color:var(--accent2); border-color:rgba(96,165,250,0.3); }
+
+  /* FOOTER BAR */
+  .footer-bar {
+    display:flex; justify-content:space-between; align-items:center;
+    margin-top:auto; padding-top:28px;
+    border-top:1px solid var(--border);
+  }
+  .footer-bar-dark { border-top-color: rgba(255,255,255,0.1); }
+  .footer-url { font-size:13px; color:var(--accent); font-weight:500; }
+
+  /* PLATFORM BADGES */
+  .platform-list { display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; }
+  .platform-badge { background:var(--bg); border:1px solid var(--border); border-radius:8px; padding:7px 14px; font-size:13px; font-weight:500; }
+
+  /* DIVIDER BLUE */
+  .accent-bar { width:48px; height:4px; background:var(--accent); border-radius:4px; margin-bottom:18px; }
+
+  /* STEP LINE */
+  .step-line {
+    position:absolute; top:28px; left:54px; right:54px;
+    height:2px;
+    background:linear-gradient(90deg,var(--accent),rgba(59,130,246,0.15));
+    z-index:0;
+  }
+
+  /* ===================== DIAGRAM STYLES ===================== */
+  .diagram-container {
+    background: var(--card-dark);
+    border-radius: 16px;
+    padding: 48px 56px;
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+  }
+
+  .diag-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    pointer-events: none;
+  }
+
+  .diag-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .diag-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr 280px;
+    gap: 0;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    min-height: 480px;
+  }
+
+  .diag-left { display: flex; flex-direction: column; gap: 16px; }
+  .diag-right { display: flex; flex-direction: column; gap: 14px; }
+
+  .diag-source-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(59,130,246,0.25);
+    border-radius: 12px;
+    padding: 16px 18px;
+    position: relative;
+  }
+  .diag-source-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .diag-source-icon {
+    width: 28px; height: 28px;
+    background: rgba(59,130,246,0.25);
+    border-radius: 7px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+  .diag-bullet { font-size: 12px; color: var(--dark-muted); line-height: 1.6; }
+  .diag-bullet li { list-style: none; padding: 1px 0; }
+  .diag-bullet li::before { content: "·  "; color: var(--accent2); }
+
+  /* Center hub */
+  .diag-center { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; position: relative; }
+
+  .diag-hub {
+    width: 140px; height: 140px;
+    background: radial-gradient(circle at center, rgba(59,130,246,0.3) 0%, rgba(30,45,69,0.9) 70%);
+    border: 2px solid rgba(59,130,246,0.5);
+    border-radius: 50%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    box-shadow: 0 0 40px rgba(59,130,246,0.25);
+    z-index: 2;
+  }
+  .diag-hub-logo {
+    font-family: 'Syne', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+    line-height: 1.3;
+  }
+  .diag-hub-sub { font-size: 10px; color: var(--accent2); text-align: center; margin-top: 3px; letter-spacing: 1px; }
+
+  .diag-flow-node {
+    background: rgba(30,45,69,0.9);
+    border: 1px solid rgba(59,130,246,0.35);
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+  }
+
+  /* SVG connector lines */
+  .diag-svg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Outcome items */
+  .diag-outcome {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(59,130,246,0.2);
+    border-radius: 10px;
+    padding: 12px 16px;
+  }
+  .diag-outcome-check {
+    width: 22px; height: 22px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px;
+    color: white;
+    flex-shrink: 0;
+  }
+  .diag-outcome-text { font-size: 13px; font-weight: 500; color: white; }
+
+  /* ===================== IMPACT PAGE STYLES ===================== */
+  .impact-stat {
+    font-family: 'Syne', sans-serif;
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--accent2);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .impact-label { font-size: 12px; font-weight: 600; color: var(--dark-muted); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 6px; }
+  .impact-desc { font-size: 13px; color: var(--dark-muted); line-height: 1.5; }
+
+  .trust-logo {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--dark-muted);
+    display: flex; align-items: center; gap: 8px;
+  }
+
+  /* SOURCE DATA CALLOUT */
+  .data-callout {
+    background: rgba(59,130,246,0.08);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    padding: 14px 18px;
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== PAGE 1: COVER ===================== -->
+<div class="page page-blue-tint">
+  <div class="blob" style="width:700px;height:700px;top:-200px;left:-100px;background:rgba(59,130,246,0.07);"></div>
+  <div class="blob" style="width:400px;height:400px;bottom:-100px;right:100px;background:rgba(96,165,250,0.05);"></div>
+
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:80px;">
+    <div class="logo"><span class="dot">·</span>Balance<span class="tech">Tech</span></div>
+    <div class="chapter-pill">Media Kit 2025</div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;flex:1;align-items:center;">
+    <div>
+      <div class="page-label">Performance UA · Built exclusively for CTV</div>
+      <h1>The First<br>Growth Agency<br><span class="accent-word">Built for</span><br>CTV Apps.</h1>
+      <p class="lead">BalanceTech is the only marketing agency that treats CTV user acquisition as a performance discipline — not a branding exercise.</p>
+      <div class="platform-list">
+        <div class="platform-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/></svg> Roku</div>
+        <div class="platform-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.94c1.5 0 4-1.73 4-6.94 0-4-1.5-6-4-6s-4 2-4 6c0 5.21 2.5 6.94 4 6.94z"/><path d="M12 8V2"/></svg> Apple TV</div>
+        <div class="platform-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 3z"/></svg> Fire TV</div>
+        <div class="platform-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8" y2="16"/><line x1="16" y1="16" x2="16" y2="16"/></svg> Android TV</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px;">
+      <div class="quote-card">
+        <div class="quote-text">"CTV ad spend hit $28.79B in 2024 — growing 17% year over year"</div>
+        <div class="quote-source">— Statista / eMarketer</div>
+      </div>
+      <div class="quote-card">
+        <div class="quote-text">"Streaming now commands 44.8% of total TV viewing time — surpassing cable for the first time"</div>
+        <div class="quote-source">— Nielsen The Gauge, 2025</div>
+      </div>
+      <div class="quote-card">
+        <div class="quote-text">"90% of U.S. households use CTV devices at least once per month"</div>
+        <div class="quote-source">— MNTN Research, 2025</div>
+      </div>
+      <div class="quote-card">
+        <div class="quote-text">"Retargeted CTV campaigns have a 2.5x higher click-through rate than non-retargeted"</div>
+        <div class="quote-source">— Industry Benchmark, 2024</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bar">
+    <div class="logo"><span class="dot">·</span>Balance<span class="tech">Tech</span></div>
+    <div class="footer-url">www.balancetech.io</div>
+  </div>
+</div>
+
+<!-- ===================== PAGE 2: THE PROBLEM ===================== -->
+<div class="page page-blue-tint">
+  <div class="blob" style="width:600px;height:600px;top:-150px;left:-100px;background:rgba(59,130,246,0.06);"></div>
+
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;">
+    <div class="logo"><span class="dot">·</span>Balance<span class="tech">Tech</span></div>
+    <div class="chapter-pill">The Problem</div>
+  </div>
+
+  <div style="margin-bottom:36px;">
+    <div class="page-label">Chapter 1</div>
+    <h2>CTV Has Reach.<br>The <span class="accent-word">Growth Engine</span> is Missing.</h2>
+    <p class="lead">Mobile perfected CPA-based growth. Web refined attribution funnels. CTV still operates almost entirely on CPM-based awareness models — leaving publishers without a reliable engine to drive measurable user growth.</p>
+  </div>
+
+  <div class="grid-3" style="flex:1;align-items:start;">
+    <div style="background:#111827;border:1px solid rgba(59,130,246,0.2);border-radius:14px;padding:28px;">
+      <div style="width:44px;height:44px;background:rgba(59,130,246,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
+      <h3 class="h3-dark">Discovery Gap</h3>
+      <p style="color:var(--dark-muted);font-size:14px;line-height:1.6;margin-top:6px;">The average household actively engages with just <strong style="color:var(--accent2);">2–3 streaming apps</strong>. Winner-takes-all dynamics make discovery the single biggest barrier to growth for any publisher outside the top tier.</p>
+    </div>
+    <div style="background:#111827;border:1px solid rgba(59,130,246,0.2);border-radius:14px;padding:28px;">
+      <div style="width:44px;height:44px;background:rgba(59,130,246,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+      <h3 class="h3-dark">Cross-Device Breakdown</h3>
+      <p style="color:var(--dark-muted);font-size:14px;line-height:1.6;margin-top:6px;">Ads reach users on mobile, but the app lives on Roku or Fire TV. Generic links, wrong storefronts, and login friction kill conversion. <strong style="color:var(--accent2);">61% of marketers</strong> struggle with cross-platform attribution.</p>
+    </div>
+    <div style="background:#111827;border:1px solid rgba(59,130,246,0.2);border-radius:14px;padding:28px;">
+      <div style="width:44px;height:44px;background:rgba(59,130,246,0.2);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/></svg></div>
+      <h3 class="h3-dark">Non-Clickable Ads</h3>
+      <p style="color:var(--dark-muted);font-size:14px;line-height:1.6;margin-top:6px;">CTV ads lack native interactivity. QR codes deliver <strong style="color:var(--accent2);">sub-1% engagement</strong> (Innovid). The industry is stuck paying premium CPMs with no path to measure direct response.</p>
+    </div>
+  </div>
+
+  <div class="footer-bar">
+    <div class="logo"><span class="dot">·</span>Balance<span class="tech">Tech</span></div>
+    <div class="footer-url">www.balancetech.io</div>
+  </div>
+</div>
+
+<!-- ===================== PAGE 3: OPPORTUNITY ===================== -->
+<div class="page page-blue-tint">
+  <div class="blob" style="width:600px;height:600px;top:-100px;right:-100px;background:rgba(59,130,246,0.07);"></div>
+
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;">
+    <div class="logo"><span class="dot">·</span>Balance<span class="tech">Tech</span></div>
+    <div class="chapter-pill">The Opportunity</div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:56px;flex:1;align-items:start;">
+    <div>
+      <div class="page-label">Chapter 2</div>
+      <h2>The Hidden Demand for<br><span class="accent-word">Performance-Based</span> Growth</h2>
+      <p class="lead">Many CTV publishers are also monetization operators. They don't require day-one ROI — because user scale unlocks multiple revenue levers simultaneously.</p>
+      <div class="check-list" style="margin-top:28px;">
+        <div class="check-item"><div class="check-dot">✓</div><span style="color:var(--text);">User scale increases inventory value — more eyeballs command higher CPMs</span></div>
+        <div class="check-item"><div class="check-dot">✓</div><span style="color:var(--text);">Scale improves programmatic monetization leverage and floor price negotiations</span></div>
+        <div class="check-item"><div class="check-dot">✓</div><span style="color:var(--text);">Scale strengthens OS platform negotiations and featured placement deals</span></div>
+        <div class="check-item"><div class="check-dot">✓</div><span style="color:var(--text);">Scale fuels adjacent revenue lines: sponsorships, content licensing, affiliates</span></div>
+      </div>
+      <div style="margin-top:28px;padding:18px 22px;background:rgba(59,130,246,0.08);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;">
+        <p style="font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--text);">The demand exists. The product didn't — until now.</p>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px;">
+      <div style="background:#111827;border:1px solid rgba(59,130,246,0.25);border-radius:14px;padding:24px;">
+        <div class="stat-num">$28.8B</div>
+        <div class="stat-label">CTV Ad Spend 2024</div>
+        <div class="stat-desc">Growing 17% YoY — projected to hit $46.9B by 2029 (eMarketer)</div>
+      </div>
+      <div style="background:#111827;border:1px solid rgba(59,130,246,0.25);border-radius:14px;padding:24px;">
+        <div class="stat-num">90%</div>
+        <div class="stat-label">U.S. Household Penetration</div>
+        <div class="stat-desc">Of U.S. households use CTV devices monthly — a record high in 2025</div>
+      </div>
+      <div style="background:#111827;border:1px solid rgba(59,130,246,0.25);border-radius:14px;padding:24px;">
+        <div class="stat-num">4.5x</div>
+        <div class="stat-label">CTV vs. Linear TV ROI</div>
+        <div class="stat-desc">CTV advertising delivers 4.5x higher ROI than traditional linear TV buys</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bar">
+    <div class="logo"><span class="dot">·</span>Balance<span class="tech">Tech</span></div>
+    <div class="footer-url">www.balancetech.io</div>
+  </div>
+</div>
+
+<!-- ===================== PAGE 4: SERVICES OVERVIEW ===================== -->
+<div class="page page-blue-tint">
+  <div class="blob" style="width:500px;height:500px;bottom:-100px;left:-100px;background:rgba(59,130,246,0.06);"></div>
+
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;">
+    <div class="logo"><span class="dot">·</span>Balance<span class="tech">Tech</span></div>
+    <div class="chapter-pill">Our Services</div>
+  </div>
+
+  <div style="margin-bottom:36px;">
+    <div class="page-label">Chapter 3</div>
+    <h2>How BalanceTech <span class="accent-word">Grows</span><br>Your CTV App</h2>
+    <p style="color:var(--muted);font-size:16px;margin-top:10px;">From strategy and creative assets to media buying and reporting — we own the outcome, not just the brief.</p>
+  </div>
+
+  <div class="grid-4" style="flex:1;align-items:start;">
+    <div style="background:#111827;border:1px solid rgba(59,130,246,0.2);border-radius:14px;padding:26px;">
+      <div class="num-badge">01</div>
+      <h3 class="h3-dark" style="font-size:16px;">On-Device Promotion</h3>
+      <p style="color:var(--dark-muted);font-size:13px;line-height:1.6;margin-top:8px;">Paid campaigns inside Roku, Apple TV, Fire TV, and Android TV OS — home screen placements, storefront features, and in-OS ad units reaching users in CTV mindset.</p>
+    </div>
+    <div style="background:#111827;border:1px solid rgba(59,130,246,0.2);border-radius:14px;padding:26px;">
+      <div class="num-badge">02</div>
+      <h3 class="h3-dark" style="font-size:16px;">Direct-to-Install Video</h3>
+      <p style="color:var(--dark-muted);font-size:13px;line-height:1.6;margin-top:8px;">Performance video campaigns with direct install CTAs. Remote-triggered interactions where supported. Every placement optimized against install and activation targets.</p>
+    </div>
+    <div style="background:#111827;border:1px solid rgba(59,130,246,0.2);border-radius:14px;padding:26px;">
+      <div class="num-badge" style="background:linear-gradient(135deg,#1d4ed8,#3b82f6);">03</div>
+      <h3 class="h3-dark" style="font-size:16px;">Cross-Device Retargeting</h3>
+      <p style="color:var(--dark-muted);font-size:13px;line-height:1.6;margin-top:8px;">Household-level data identifies who owns Roku vs Fire TV vs Apple TV, then retargets them on mobile apps and social — showing the exact platform-matched install link.</p>
+    </div>
+    <div style="background:#111827;border:1px solid rgba(59,130,246,0.2);border-radius:14px;padding:26px;">
+      <div class="num-badge">04</div>
+      <h3 class="h3-dark" style="font-size:16px;">Influencer & Creator Funnels</h3>
+      <p style="color:var(--dark-muted);font-size:13px;line-height:1.6;margin-top:8px;">YouTube creators and social influencers in the streaming vertical — turning their audiences into CTV app installers through tracked, performance-based partnerships.</p>
+    </div>
+  </div>
+  <!-- Service 05 teaser -->
+  <div style="margin-top:20px;background:linear-gradient(135deg,rgba(59,130,246,0.1),rgba(30,45,69,0.6));border:1px solid rgba(59,130,246,0.3);border-radius:14px;padding:24px 32px;display:flex;align-items:center;justify-content:space-between;">
+    <div style="display:flex;align-items:center;gap:20px;">
+      <div class="num-badge" style="margin-bottom:0;background:linear-gradient(135deg,#1d4ed8,#3b82f6);">05</div>
+      <div>
+        <h3 style="font-size:16px;color:white;margin-bottom:4px;">Creative Studio & Video Production</h3>
+        <p style="color:var(--dark-muted);font-size:13px;">We handle end-to-end creative — from CTV ad production to art direction, motion graphics, and platform-optimized assets.</p>
+      </div>
+    </div>
+    <div style="font-size:12px;color:var(--accent2);font-weight:600;letter-spacing:1px;text-transform:uppercase;white-space:nowrap;margin-left:24px;">See next page &rarr;</div>
+  </div>
+
+  <div class="footer-bar">
+    <div class="logo"><span class="dot">·</span>Balance<span class="tech">Tech</span></div>
+    <div class="footer-url">www.balancetech.io</div>
+  </div>
+</div>
+
+<!-- ===================== PAGE 5: SERVICE 01 — ON-DEVICE ===================== -->
+<div class="page page-blue-tint">
+  <div class="blob" style="width:600px;height:600px;top:-200px;right:-150px;background:rgba(59,130,246,0.07);"></div>
+
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;">
+    <div class="logo"><span class="dot">·</span>Balance<span class="tech">Tech</span></div>
+    <div class="chapter-pill">Service 01</div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;flex:1;align-items:start;">
+    <div>
+      <div class="num-badge" style="width:48px;height:48px;border-radius:12px;font-size:16px;">01</div>
+      <h2>On-Device<br><span class="accent-word">Promotion</span></h2>
+      <p class="lead">We run paid campaigns directly inside Roku, Apple TV, Fire TV, and Android TV operating systems — reaching users already in the streaming mindset.</p>
+
+      <div style="margin-top:32px;display:flex;flex-direction:column;gap:16px;">
+        <div style="display:flex;gap:14px;align-items:flex-start;">
+          <div class="icon-box" style="margin-bottom:0;flex-shrink:0;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <div>
+            <div style="font-weight:600;color:var(--text);margin-bottom:4px;">Home Screen Placements</div>
+            <div style="font-size:13px;color:var(--muted);line-height:1.5;">Premium banner and hero placements on the OS home screen — the highest-traffic real estate on every CTV device, seen by 125M+ daily Roku users alone.</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:14px;align-items:flex-start;">
+          <div class="icon-box" style="margin-bottom:0;flex-shrink:0;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><rect x="9" y="13" width="6" height="8"/></svg></div>
+          <div>
+            <div style="font-weight:600;color:var(--text);margin-bottom:4px;">Storefront Featured Placement</div>
+            <div style="font-size:13px;color:var(--muted);line-height:1.5;">Category shelf features and "New & Notable" placements inside the app store — the CTV equivalent of App Store featuring, algorithmically amplified.</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:14px;align-items:flex-start;">
+          <div class="icon-box" style="margin-bottom:0;flex-shrink:0;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+          <div>
+            <div style="font-weight:600;color:var(--text);margin-bottom:4px;">In-OS Interactive Ad Units</div>
+            <div style="font-size:13px;color:var(--muted);line-height:1.5;">Roku Action Ads and remote-triggered formats let users click "OK" to install, get a text, or start a trial — direct-response inside the TV itself.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px;">
+      <div style="background:#111827;border:1px solid rgba(59,130,246,0.25);border-radius:14px;padding:28px;">
+        <div style="font-size:12px;font-weight:600;color:var(--dark-muted);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:16px;">Direct OS Placement — Available Platforms</div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.07);">
+            <span style="color:white;font-size:14px;font-weight:600;">Roku</span>
+            <div style="display:flex;flex-direction:column;align-items:flex-end;gap:3px;">
+              <span style="color:var(--accent2);font-size:13px;font-weight:600;">37% market share</span>
+              <span style="font-size:11px;color:var(--dark-muted);">Home screen · Storefront · Action Ads</span>
+            </div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;">
+            <span style="color:white;font-size:14px;font-weight:600;">Amazon Fire TV</span>
+            <div style="display:flex;flex-direction:column;align-items:flex-end;gap:3px;">
+              <span style="color:var(--accent2);font-size:13px;font-weight:600;">17% market share</span>
+              <span style="font-size:11px;color:var(--dark-muted);">Home screen · Sponsored tiles · DSP</span>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:16px;padding:12px 14px;background:rgba(255,255,255,0.04);border-radius:8px;border:1px solid rgba(255,255,255,0.06);">
+          <div style="font-size:12px;color:var(--dark-muted);line-height:1.6;"><strong style="color:rgba(255,255,255,0.5);">Note:</strong> Apple TV and Android/Google TV do not offer direct OS-level home screen or storefront ad placements. We reach those audiences via programmatic in-stream and cross-device retargeting instead.</div>
+        </div>
+      </div>
+      <div style="background:linear-gradient(135deg,rgba(59,130,246,0.12),rgba(59,130,246,0.04));border:1px solid var(--accent-border);border-radius:14px;padding:24px;">
+        <div style="font-family:'Syne',sans-serif;font-size:32px;font-weight:800;color:var(--accent);line-height:1;">125M+</div>
+        <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:4px;margin-bottom:8px;">Daily Home Screen Visitors</div>
+        <div style="font-size:13px;color:var(--muted);line-height:1.5;">Roku's home screen is visited by 125M+ users daily — the largest single CTV touchpoint for app discovery in the U.S.</div>
+        <div style="font-size:11px;color:var(--accent);margin-top:10px;">Source: Roku advertising.roku.com, 2025</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bar">
+    <div class="logo"><span class="dot">·</span>Balance<span class="tech">Tech</span></div>
+    <div class="footer-url">www.balancetech.io</div>
+  </div>
+</div>
+
+<!-- ===================== PAGE 6: SERVICE 02 — VIDEO ADS ===================== -->
+<div class="page page-blue-tint">
+  <div class="blob" style="width:500px;height:500px;bottom:-100px;right:-100px;background:rgba(59,130,246,0.06);"></div>
+
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;">
+    <div class="logo"><span class="dot">·</span>Balance<span class="tech">Tech</span></div>
+    <div class="chapter-pill">Service 02</div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;flex:1;align-items:start;">
+    <div>
+      <div class="num-badge" style="width:48px;height:48px;border-radius:12px;font-size:16px;">02</div>
+      <h2>Direct-to-Install<br><span class="accent-word">Video Ads</span></h2>
+      <p class="lead">Roku's proprietary Action Ads technology lets users press "OK" on their remote to install your app instantly — the only CTV platform with native direct-response install capability.</p>
+
+      <div style="margin-top:32px;display:flex;flex-direction:column;gap:16px;">
+        <div style="display:flex;gap:14px;align-items:flex-start;">
+          <div class="icon-box" style="margin-bottom:0;flex-shrink:0;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><circle cx="15" cy="13" r="1"/><circle cx="17" cy="11" r="1"/><rect x="2" y="6" width="20" height="12" rx="2"/></svg></div>
+          <div>
+            <div style="font-weight:600;color:var(--text);margin-bottom:4px;">Roku Action Ads — One-Click Install</div>
+            <div style="font-size:13px;color:var(--muted);line-height:1.5;">Users press "OK" on the Roku remote mid-ad to receive an install link. The only CTV platform with native, direct-response app install from the TV itself.</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:14px;align-items:flex-start;">
+          <div class="icon-box" style="margin-bottom:0;flex-shrink:0;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/></svg></div>
+          <div>
+            <div style="font-weight:600;color:var(--text);margin-bottom:4px;">Home Screen + In-Content Placements</div>
+            <div style="font-size:13px;color:var(--muted);line-height:1.5;">We combine Roku home screen banner placements with in-stream video ads — hitting users both before and during their streaming session.</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:14px;align-items:flex-start;">
+          <div class="icon-box" style="margin-bottom:0;flex-shrink:0;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg></div>
+          <div>
+            <div style="font-weight:600;color:var(--text);margin-bottom:4px;">MMP Attribution — Adjust, AppsFlyer, Branch</div>
+            <div style="font-size:13px;color:var(--muted);line-height:1.5;">Full CTV-to-install attribution through your existing MMP stack — connecting TV exposure to app installs, first streams, and post-install events.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px;">
+      <div style="background:#111827;border:1px solid rgba(59,130,246,0.25);border-radius:14px;padding:24px;">
+        <div class="stat-num" style="font-size:40px;">8x</div>
+        <div class="stat-label">Attention vs. Mobile</div>
+        <div class="stat-desc">CTV holds viewer attention 8x longer than mobile ads and 16x longer than desktop ads</div>
+        <div style="font-size:11px;color:var(--accent);margin-top:8px;">Source: International Advertising Solutions</div>
+      </div>
+      <div style="background:#111827;border:1px solid rgba(59,130,246,0.25);border-radius:14px;padding:24px;">
+        <div class="stat-num" style="font-size:40px;">95%</div>
+        <div class="stat-label">Video Completion Rate</div>
+        <div class="stat-desc">Viewers watch 95% of CTV ads to completion — creating the most attentive ad environment in digital</div>
+        <div style="font-size:11px;color:var(--accent);margin-top:8px;">Source: IAB CTV Report 2024</div>
+      </div>
+      <div style="background:#111827;border:1px solid rgba(59,130,246,0.25);border-radius:14px;padding:24px;">
+        <div class="stat-num" style="font-size:40px;">90%</div>
+        <div class="stat-label">Gen Z Second-Screen</div>
+        <div class="stat-desc">90% of Gen Z viewers use a mobile device while watching CTV — primed to convert when they see your install link</div>
+        <div style="font-size:11px;color:var(--accent);margin-top:8px;">Source: Roku Advertising, 2025</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bar">
+    <div class="logo"><span class="dot">·</span>Balance<span class="tech">Tech</span></div>
+    <div class="footer-url">www.balancetech.io</div>
+  </div>
+</div>
+
+<!-- ===================== PAGE 7: SERVICE 03 — CROSS-DEVICE RETARGETING (DIAGRAM) ===================== -->
+<div class="page" style="background:#0d1117;padding:48px 64px;">
+  <div class="blob" style="width:600px;height:600px;top:-200px;right:-100px;background:rgba(59,130,246,0.08);"></div>
+  <div class="blob" style="width:400px;height:400px;bottom:-100px;left:100px;background:rgba(96,165,250,0.05);"></div>
+
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:36px;position:relative;z-index:2;">
+    <div class="logo logo-light"><span class="dot" style="color:var(--accent2);">·</span>Balance<span style="color:var(--accent2);">Tech</span></div>
+    <div class="chapter-pill chapter-pill-dark">Service 03</div>
+  </div>
+
+  <!-- Diagram title + layout -->
+  <div style="display:flex;gap:48px;flex:1;position:relative;z-index:2;align-items:flex-start;">
+
+    <!-- LEFT CARDS -->
+    <div style="display:flex;flex-direction:column;gap:12px;width:240px;flex-shrink:0;padding-top:60px;">
+      <div style="font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dark-muted);margin-bottom:4px;">Signal Sources</div>
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(59,130,246,0.3);border-radius:10px;padding:14px 16px;">
+        <div style="font-family:'Syne',sans-serif;font-size:12px;font-weight:700;color:white;margin-bottom:6px;display:flex;align-items:center;gap:7px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent2)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/></svg>CTV Device Owners</div>
+        <div style="font-size:11px;color:var(--dark-muted);line-height:1.7;">Roku · Fire TV · Apple TV · Android TV</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(59,130,246,0.3);border-radius:10px;padding:14px 16px;">
+        <div style="font-family:'Syne',sans-serif;font-size:12px;font-weight:700;color:white;margin-bottom:6px;display:flex;align-items:center;gap:7px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent2)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg>Behavioral Signals</div>
+        <div style="font-size:11px;color:var(--dark-muted);line-height:1.7;">Viewing habits · App usage · Genre intent</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(59,130,246,0.3);border-radius:10px;padding:14px 16px;">
+        <div style="font-family:'Syne',sans-serif;font-size:12px;font-weight:700;color:white;margin-bottom:6px;display:flex;align-items:center;gap:7px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent2)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Household Graph</div>
+        <div style="font-size:11px;color:var(--dark-muted);line-height:1.7;">IP matching · Deterministic IDs · ACR data</div>
+      </div>
+    </div>
+
+    <!-- CENTER: Full SVG Diagram -->
+    <div style="flex:1;position:relative;min-height:540px;">
+      <svg width="100%" height="540" viewBox="0 0 740 540" style="display:block;">
+        <defs>
+          <marker id="arrowBlue" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+            <polygon points="0 0, 7 2.5, 0 5" fill="rgba(96,165,250,0.8)"/>
+          </marker>
+          <marker id="arrowFaint" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto">
+            <polygon points="0 0, 7 2.5, 0 5" fill="rgba(59,130,246,0.5)"/>
+          </marker>
+          <radialGradient id="hubGrad" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="rgba(59,130,246,0.4)"/>
+            <stop offset="100%" stop-color="rgba(13,17,23,0.98)"/>
+          </radialGradient>
+          <!-- Concentric rings like Track360 -->
+          <circle id="ring1" cx="370" cy="270" r="180" fill="none" stroke="rgba(59,130,246,0.08)" stroke-width="1"/>
+          <circle id="ring2" cx="370" cy="270" r="240" fill="none" stroke="rgba(59,130,246,0.05)" stroke-width="1"/>
+        </defs>
+
+        <!-- Background rings -->
+        <circle cx="370" cy="270" r="180" fill="none" stroke="rgba(59,130,246,0.08)" stroke-width="1"/>
+        <circle cx="370" cy="270" r="240" fill="none" stroke="rgba(59,130,246,0.05)" stroke-width="1"/>
+        <circle cx="370" cy="270" r="115" fill="none" stroke="rgba(59,130,246,0.12)" stroke-width="1"/>
+
+        <!-- Lines from left (input) to hub — entering left side of hub -->
+        <!-- Audience ID node at top-left area -->
+        <line x1="200" y1="100" x2="296" y2="218" stroke="rgba(59,130,246,0.5)" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowFaint)"/>
+        <!-- Device Matching node left -->
+        <line x1="160" y1="270" x2="255" y2="270" stroke="rgba(59,130,246,0.6)" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+        <!-- Campaign Optimization bottom-left -->
+        <line x1="200" y1="430" x2="297" y2="316" stroke="rgba(59,130,246,0.5)" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowFaint)"/>
+
+        <!-- Lines from hub to right (output) channels -->
+        <!-- Mobile Games top-right -->
+        <line x1="444" y1="218" x2="520" y2="120" stroke="rgba(96,165,250,0.6)" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+        <!-- Social Platforms right -->
+        <line x1="485" y1="270" x2="560" y2="200" stroke="rgba(96,165,250,0.7)" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+        <!-- Display right-center -->
+        <line x1="485" y1="270" x2="560" y2="310" stroke="rgba(96,165,250,0.6)" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+        <!-- Programmatic CTV bottom-right -->
+        <line x1="444" y1="316" x2="520" y2="400" stroke="rgba(96,165,250,0.5)" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowFaint)"/>
+        <!-- Attribution reporting bottom -->
+        <line x1="370" y1="386" x2="370" y2="450" stroke="rgba(96,165,250,0.5)" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowBlue)"/>
+
+        <!-- Hub circle -->
+        <circle cx="370" cy="270" r="95" fill="url(#hubGrad)" stroke="rgba(59,130,246,0.6)" stroke-width="2"/>
+        <circle cx="370" cy="270" r="95" fill="none" stroke="rgba(96,165,250,0.2)" stroke-width="8" filter="url(#glow)"/>
+
+        <!-- Hub text -->
+        <text x="370" y="261" text-anchor="middle" font-family="Syne, sans-serif" font-weight="800" font-size="18" fill="white">BalanceTech</text>
+        <text x="370" y="282" text-anchor="middle" font-family="Inter, sans-serif" font-weight="400" font-size="10" fill="rgba(96,165,250,0.8)" letter-spacing="2">PLATFORM</text>
+
+        <!-- Input flow nodes (left cluster) -->
+        <!-- Audience ID - upper left -->
+        <rect x="60" y="72" width="170" height="36" rx="8" fill="rgba(30,45,69,0.95)" stroke="rgba(59,130,246,0.4)" stroke-width="1"/>
+        <text x="145" y="95" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600" font-size="12" fill="white">Audience Identification</text>
+
+        <!-- Device Matching - left center -->
+        <rect x="20" y="252" width="150" height="36" rx="8" fill="rgba(30,45,69,0.95)" stroke="rgba(59,130,246,0.5)" stroke-width="1"/>
+        <circle cx="37" cy="270" r="5" fill="var(--accent2)"/>
+        <text x="112" y="275" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600" font-size="12" fill="white">Device Matching</text>
+
+        <!-- Campaign Opt - lower left -->
+        <rect x="55" y="415" width="180" height="36" rx="8" fill="rgba(30,45,69,0.95)" stroke="rgba(59,130,246,0.4)" stroke-width="1"/>
+        <text x="145" y="438" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600" font-size="12" fill="white">Campaign Optimization</text>
+
+        <!-- Output channels (right cluster) -->
+        <!-- Mobile Games - top right -->
+        <rect x="525" y="95" width="150" height="50" rx="8" fill="rgba(30,45,69,0.95)" stroke="rgba(59,130,246,0.35)" stroke-width="1"/>
+        <text x="600" y="116" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="12" fill="white">Mobile Games</text>
+        <text x="600" y="133" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="rgba(148,163,184,0.9)">In-app install ads</text>
+
+        <!-- Social Platforms -->
+        <rect x="565" y="178" width="150" height="50" rx="8" fill="rgba(30,45,69,0.95)" stroke="rgba(59,130,246,0.35)" stroke-width="1"/>
+        <text x="640" y="199" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="12" fill="white">Social Platforms</text>
+        <text x="640" y="216" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="rgba(148,163,184,0.9)">FB · IG · TikTok · YT</text>
+
+        <!-- Display Web -->
+        <rect x="565" y="290" width="150" height="50" rx="8" fill="rgba(30,45,69,0.95)" stroke="rgba(59,130,246,0.35)" stroke-width="1"/>
+        <text x="640" y="311" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="12" fill="white">Display &amp; Web</text>
+        <text x="640" y="328" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="rgba(148,163,184,0.9)">Device-matched links</text>
+
+        <!-- Programmatic CTV -->
+        <rect x="522" y="375" width="155" height="50" rx="8" fill="rgba(59,130,246,0.12)" stroke="rgba(96,165,250,0.4)" stroke-width="1"/>
+        <text x="600" y="396" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="12" fill="rgba(96,165,250,1)">Programmatic CTV</text>
+        <text x="600" y="413" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="rgba(148,163,184,0.9)">AppleTV · Google TV</text>
+
+        <!-- Attribution bottom -->
+        <rect x="285" y="455" width="170" height="36" rx="8" fill="rgba(30,45,69,0.95)" stroke="rgba(59,130,246,0.4)" stroke-width="1"/>
+        <text x="370" y="478" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600" font-size="12" fill="white">Attribution &amp; Reporting</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Bottom stat strip -->
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:14px;margin-top:16px;position:relative;z-index:2;">
+    <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(59,130,246,0.2);border-radius:10px;padding:12px 16px;text-align:center;">
+      <div style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--accent2);">2.5x</div>
+      <div style="font-size:11px;color:var(--dark-muted);margin-top:2px;">Higher CTR with retargeting</div>
+    </div>
+    <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(59,130,246,0.2);border-radius:10px;padding:12px 16px;text-align:center;">
+      <div style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--accent2);">117M</div>
+      <div style="font-size:11px;color:var(--dark-muted);margin-top:2px;">U.S. CTV households reachable</div>
+    </div>
+    <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(59,130,246,0.2);border-radius:10px;padding:12px 16px;text-align:center;">
+      <div style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--accent2);">0 generic</div>
+      <div style="font-size:11px;color:var(--dark-muted);margin-top:2px;">links — device-matched always</div>
+    </div>
+    <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(59,130,246,0.2);border-radius:10px;padding:12px 16px;text-align:center;">
+      <div style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--accent2);">200%+</div>
+      <div style="font-size:11px;color:var(--dark-muted);margin-top:2px;">conversion lift vs. CTV-only</div>
+    </div>
+  </div>
+
+  <div class="footer-bar footer-bar-dark" style="border-top-color:rgba(255,255,255,0.1);">
+    <div class="logo logo-light"><span class="dot" style="color:var(--accent2);">·</span>Balance<span style="color:var(--accent2);">Tech</span></div>
+    <div class="footer-url">www.balancetech.io</div>
+  </div>
+</div>
+
+<!-- ===================== PAGE 8: SERVICE 04 — INFLUENCERS ===================== -->
+<div class="page page-blue-tint">
+  <div class="blob" style="width:500px;height:500px;top:-100px;left:-100px;background:rgba(59,130,246,0.06);"></div>
+
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;">
+    <div class="logo"><span class="dot">·</span>Balance<span class="tech">Tech</span></div>
+    <div class="chapter-pill">Service 04</div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;flex:1;align-items:start;">
+    <div>
+      <div class="num-badge" style="width:48px;height:48px;border-radius:12px;font-size:16px;">04</div>
+      <h2>Influencer &<br><span class="accent-word">Creator Funnels</span></h2>
+      <p class="lead">We activate YouTube creators and social influencers in the movies, TV, and streaming content verticals — turning their audiences into CTV app installers through tracked, performance-based partnerships.</p>
+
+      <div style="margin-top:28px;display:flex;flex-direction:column;gap:14px;">
+        <div style="background:#111827;border:1px solid rgba(59,130,246,0.2);border-radius:10px;padding:18px 20px;display:flex;align-items:flex-start;gap:12px;">
+          <div style="font-size:20px;margin-top:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg></div>
+          <div>
+            <div style="font-weight:600;color:white;margin-bottom:4px;font-size:14px;">Streaming & TV Reviewers</div>
+            <div style="font-size:13px;color:var(--dark-muted);">Creators who review shows, FAST channels, and streaming apps — their audience is pre-qualified CTV users ready to install.</div>
+          </div>
+        </div>
+        <div style="background:#111827;border:1px solid rgba(59,130,246,0.2);border-radius:10px;padding:18px 20px;display:flex;align-items:flex-start;gap:12px;">
+          <div style="font-size:20px;margin-top:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 010-5H6"/><path d="M18 9h1.5a2.5 2.5 0 000-5H18"/><path d="M4 22h16"/><path d="M10 22V12a2 2 0 00-2-2H6V4h12v6h-2a2 2 0 00-2 2v10"/></svg></div>
+          <div>
+            <div style="font-weight:600;color:white;margin-bottom:4px;font-size:14px;">Sports & Niche Content Creators</div>
+            <div style="font-size:13px;color:var(--dark-muted);">Sports commentators, genre-specific creators — vertical content audiences with the highest install intent for niche FAST channels.</div>
+          </div>
+        </div>
+        <div style="background:#111827;border:1px solid rgba(59,130,246,0.2);border-radius:10px;padding:18px 20px;display:flex;align-items:flex-start;gap:12px;">
+          <div style="font-size:20px;margin-top:2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
+          <div>
+            <div style="font-weight:600;color:white;margin-bottom:4px;font-size:14px;">Performance-Based Deals Only</div>
+            <div style="font-size:13px;color:var(--dark-muted);">We structure creator deals on CPA — pay per install, trial start, or first stream — not flat fees. Zero wasted spend.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px;">
+      <div style="background:#111827;border:1px solid rgba(59,130,246,0.25);border-radius:14px;padding:24px;">
+        <div style="font-size:12px;font-weight:600;color:var(--dark-muted);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:16px;">The Creator Funnel Flow</div>
+        <div style="display:flex;flex-direction:column;gap:0;">
+          <div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.06);">
+            <div style="width:24px;height:24px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:white;flex-shrink:0;">1</div>
+            <span style="color:white;font-size:13px;">Creator posts content + CTV app mention</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.06);">
+            <div style="width:24px;height:24px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:white;flex-shrink:0;">2</div>
+            <span style="color:white;font-size:13px;">Unique tracked link routes to correct OS store</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.06);">
+            <div style="width:24px;height:24px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:white;flex-shrink:0;">3</div>
+            <span style="color:white;font-size:13px;">User installs, first stream is tracked</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px;padding:10px 0;">
+            <div style="width:24px;height:24px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:white;flex-shrink:0;">4</div>
+            <span style="color:white;font-size:13px;">Creator paid on CPA — aligned incentives</span>
+          </div>
+        </div>
+      </div>
+      <div style="background:linear-gradient(135deg,rgba(59,130,246,0.12),rgba(59,130,246,0.04));border:1px solid var(--accent-border);border-radius:14px;padding:24px;">
+        <div style="font-family:'Syne',sans-serif;font-size:32px;font-weight:800;color:var(--accent);line-height:1;">4.1x</div>
+        <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-top:4px;margin-bottom:8px;">Trial Start Uplift</div>
+        <div style="font-size:13px;color:var(--muted);line-height:1.5;">Creator-driven funnels targeting movie enthusiast audiences drove a 4.1x increase in subscription trial starts for a premium streaming app.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bar">
+    <div class="logo"><span class="dot">·</span>Balance<span class="tech">Tech</span></div>
+    <div class="footer-url">www.balancetech.io</div>
+  </div>
+</div>
+
+<!-- ===================== PAGE: STUDIO / CREATIVE ===================== -->
+<div class="page page-blue-tint">
+  <div class="blob" style="width:600px;height:600px;top:-200px;right:-150px;background:rgba(59,130,246,0.06);"></div>
+
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;">
+    <div class="logo"><span class="dot">·</span>Balance<span class="tech">Tech</span></div>
+    <div class="chapter-pill">Service 05 — Creative Studio</div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:56px;flex:1;align-items:start;">
+    <div>
+      <div class="num-badge" style="width:48px;height:48px;border-radius:12px;font-size:16px;background:linear-gradient(135deg,#1d4ed8,#3b82f6);">05</div>
+      <h2>Creative Studio<br><span class="accent-word">&amp; Video Production</span></h2>
+      <p class="lead">CTV is a lean-back, full-screen, non-skippable medium. The creative has to work harder than anywhere else. We produce everything in-house — so the ad is built for the platform, not just adapted from mobile.</p>
+
+      <div style="margin-top:32px;display:flex;flex-direction:column;gap:16px;">
+        <div style="display:flex;gap:14px;align-items:flex-start;">
+          <div class="icon-box" style="margin-bottom:0;flex-shrink:0;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg>
+          </div>
+          <div>
+            <div style="font-weight:600;color:var(--text);margin-bottom:4px;">CTV Video Production</div>
+            <div style="font-size:13px;color:var(--muted);line-height:1.5;">Full 15s and 30s spot production built natively for the living room — scripting, shooting, editing, and finishing to Roku, Fire TV, and streaming spec.</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:14px;align-items:flex-start;">
+          <div class="icon-box" style="margin-bottom:0;flex-shrink:0;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
+          <div>
+            <div style="font-weight:600;color:var(--text);margin-bottom:4px;">Art Direction</div>
+            <div style="font-size:13px;color:var(--muted);line-height:1.5;">Visual identity and brand storytelling calibrated for 65"+ screens — color grading, typography, motion, and composition for the lean-back context.</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:14px;align-items:flex-start;">
+          <div class="icon-box" style="margin-bottom:0;flex-shrink:0;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+          </div>
+          <div>
+            <div style="font-weight:600;color:var(--text);margin-bottom:4px;">Motion Graphics & Animation</div>
+            <div style="font-size:13px;color:var(--muted);line-height:1.5;">Kinetic brand assets, animated lower-thirds, and logo reveals that perform in the non-skippable CTV window — capturing attention in the first 3 seconds.</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:14px;align-items:flex-start;">
+          <div class="icon-box" style="margin-bottom:0;flex-shrink:0;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+          </div>
+          <div>
+            <div style="font-weight:600;color:var(--text);margin-bottom:4px;">Cross-Platform Asset Adaptation</div>
+            <div style="font-size:13px;color:var(--muted);line-height:1.5;">One brief, all formats. We adapt every CTV master to social (9:16, 1:1), display banners, and mobile pre-roll — ensuring consistent creative across every retargeting touchpoint.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:16px;">
+      <!-- Studio capabilities grid -->
+      <div style="background:#111827;border:1px solid rgba(59,130,246,0.2);border-radius:14px;padding:28px;">
+        <div style="font-size:12px;font-weight:600;color:var(--dark-muted);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:20px;">Studio Capabilities</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:14px 16px;">
+            <div style="font-size:13px;font-weight:600;color:white;margin-bottom:4px;">Scriptwriting</div>
+            <div style="font-size:12px;color:var(--dark-muted);">CTV-native hooks built for non-skippable attention windows</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:14px 16px;">
+            <div style="font-size:13px;font-weight:600;color:white;margin-bottom:4px;">Video Editing</div>
+            <div style="font-size:12px;color:var(--dark-muted);">15s, 30s, 6s bumpers — paced for the living room</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:14px 16px;">
+            <div style="font-size:13px;font-weight:600;color:white;margin-bottom:4px;">Color Grading</div>
+            <div style="font-size:12px;color:var(--dark-muted);">HDR-ready finishing for premium big-screen output</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:14px 16px;">
+            <div style="font-size:13px;font-weight:600;color:white;margin-bottom:4px;">Motion Design</div>
+            <div style="font-size:12px;color:var(--dark-muted);">Animated titles, transitions, and brand elements</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:14px 16px;">
+            <div style="font-size:13px;font-weight:600;color:white;margin-bottom:4px;">Sound Design</div>
+            <div style="font-size:12px;color:var(--dark-muted);">Audio mixed and mastered for TV speaker environments</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:14px 16px;">
+            <div style="font-size:13px;font-weight:600;color:white;margin-bottom:4px;">Format Delivery</div>
+            <div style="font-size:12px;color:var(--dark-muted);">Roku, Fire TV, social, display — all specs, one pass</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Why creative matters -->
+      <div style="background:linear-gradient(135deg,rgba(59,130,246,0.12),rgba(59,130,246,0.04));border:1px solid var(--accent-border);border-radius:14px;padding:24px;">
+        <div style="font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:var(--text);margin-bottom:10px;">Why CTV Creative Is Different</div>
+        <div style="font-size:13px;color:var(--muted);line-height:1.7;">On mobile, a bad ad gets skipped. On CTV, it plays to completion — for better or worse. With 95% video completion rates and a 65" canvas, the creative either builds a brand or destroys one. We make sure it builds.</div>
+        <div style="margin-top:14px;display:flex;gap:20px;">
+          <div style="text-align:center;">
+            <div style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--accent);">95%</div>
+            <div style="font-size:11px;color:var(--muted);">completion rate</div>
+          </div>
+          <div style="width:1px;background:var(--border);"></div>
+          <div style="text-align:center;">
+            <div style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--accent);">8x</div>
+            <div style="font-size:11px;color:var(--muted);">attention vs. mobile</div>
+          </div>
+          <div style="width:1px;background:var(--border);"></div>
+          <div style="text-align:center;">
+            <div style="font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:var(--accent);">65"</div>
+            <div style="font-size:11px;color:var(--muted);">average screen size</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bar">
+    <div class="logo"><span class="dot">·</span>Balance<span class="tech">Tech</span></div>
+    <div class="footer-url">www.balancetech.io</div>
+  </div>
+</div>
+
+<!-- ===================== PAGE: COMPETITIVE ADVANTAGES ===================== -->
+<div class="page page-blue-tint">
+  <div class="blob" style="width:600px;height:600px;top:-150px;right:-100px;background:rgba(59,130,246,0.06);"></div>
+
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;">
+    <div class="logo"><span class="dot">·</span>Balance<span class="tech">Tech</span></div>
+    <div class="chapter-pill">Why BalanceTech Wins</div>
+  </div>
+
+  <div style="margin-bottom:36px;">
+    <div class="page-label">Competitive Landscape</div>
+    <h2>A Market With <span class="accent-word">No Real</span><br>Competition — Yet</h2>
+    <p class="lead" style="max-width:700px;">Most agencies advertising on CTV are selling insurance, e-commerce, and mobile games. Nobody is doing performance UA <em>for</em> CTV apps. That gap is BalanceTech.</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;flex:1;align-items:start;">
+    <!-- Left: Market Gaps -->
+    <div style="display:flex;flex-direction:column;gap:14px;">
+      <div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:2px;margin-bottom:4px;">Market Gaps We Exploit</div>
+
+      <div style="background:#111827;border:1px solid rgba(59,130,246,0.2);border-radius:12px;padding:22px 24px;">
+        <div style="display:flex;align-items:flex-start;gap:12px;">
+          <div style="width:32px;height:32px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><circle cx="15" cy="13" r="1"/><circle cx="17" cy="11" r="1"/><rect x="2" y="6" width="20" height="12" rx="2"/></svg>
+          </div>
+          <div>
+            <div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:white;margin-bottom:5px;">No Direct CTV-App Competition in Mobile Games</div>
+            <div style="font-size:13px;color:var(--dark-muted);line-height:1.6;">Mobile games is the #1 retargeting channel for performance campaigns — yet zero agencies are using it specifically to drive CTV app installs. We own this channel unchallenged.</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#111827;border:1px solid rgba(59,130,246,0.2);border-radius:12px;padding:22px 24px;">
+        <div style="display:flex;align-items:flex-start;gap:12px;">
+          <div style="width:32px;height:32px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:white;margin-bottom:5px;">CTV Industry Focused on Advertisers, Not App Publishers</div>
+            <div style="font-size:13px;color:var(--dark-muted);line-height:1.6;">Every CTV agency advertises insurance, fintech, or CPG <em>on</em> CTV. No one has built a performance engine <em>for</em> CTV app publishers to grow their own audience. We are the first.</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#111827;border:1px solid rgba(59,130,246,0.2);border-radius:12px;padding:22px 24px;">
+        <div style="display:flex;align-items:flex-start;gap:12px;">
+          <div style="width:32px;height:32px;background:var(--accent);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+          </div>
+          <div>
+            <div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:white;margin-bottom:5px;">Performance + CTV Expertise Rarely Combined</div>
+            <div style="font-size:13px;color:var(--dark-muted);line-height:1.6;">CTV specialists don't know performance marketing. Performance marketers don't know CTV. BalanceTech is built from both sides — the only agency that speaks both languages fluently.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Fraud + Differentiators -->
+    <div style="display:flex;flex-direction:column;gap:14px;">
+      <div style="font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:2px;margin-bottom:4px;">Built-In Trust Mechanisms</div>
+
+      <div style="background:linear-gradient(135deg,rgba(59,130,246,0.12),rgba(30,45,69,0.8));border:1px solid rgba(59,130,246,0.3);border-radius:12px;padding:22px 24px;">
+        <div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:white;margin-bottom:10px;display:flex;align-items:center;gap:10px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          Fraud Detection — Critical for Scale
+        </div>
+        <div style="font-size:13px;color:var(--dark-muted);line-height:1.6;margin-bottom:14px;">CTV ad fraud accounts for ~4% of impressions — far lower than web video, but at scale, even 4% matters. For larger brand clients, fraud-free inventory is a non-negotiable requirement for trust and budget approval.</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;align-items:center;gap:10px;font-size:12px;color:var(--dark-muted);">
+            <div style="width:16px;height:16px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;color:white;flex-shrink:0;">✓</div>
+            Invalid traffic filtering via IVT detection on all impressions
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:12px;color:var(--dark-muted);">
+            <div style="width:16px;height:16px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;color:white;flex-shrink:0;">✓</div>
+            Bundle ID verification to avoid spoofed CTV inventory
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:12px;color:var(--dark-muted);">
+            <div style="width:16px;height:16px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;color:white;flex-shrink:0;">✓</div>
+            Household graph validation — no bot household attribution
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:12px;color:var(--dark-muted);">
+            <div style="width:16px;height:16px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;color:white;flex-shrink:0;">✓</div>
+            MMP integration for verified install attribution, not ad-claimed
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#111827;border:1px solid rgba(59,130,246,0.2);border-radius:12px;padding:20px 24px;">
+        <div style="font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--accent2);margin-bottom:10px;">First-Mover Advantage</div>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.05);">
+            <span style="font-size:12px;color:var(--dark-muted);">CTV app performance agencies</span>
+            <span style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--accent2);">~0</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.05);">
+            <span style="font-size:12px;color:var(--dark-muted);">CTV app publishers needing UA</span>
+            <span style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--accent2);">Thousands</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;">
+            <span style="font-size:12px;color:var(--dark-muted);">Window to establish category leadership</span>
+            <span style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--accent2);">Now</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bar">
+    <div class="logo"><span class="dot">·</span>Balance<span class="tech">Tech</span></div>
+    <div class="footer-url">www.balancetech.io</div>
+  </div>
+</div>
+
+<!-- ===================== PAGE: MEASUREMENT & DASHBOARD ===================== -->
+<div class="page page-blue-tint">
+  <div class="blob" style="width:500px;height:500px;bottom:-100px;left:-100px;background:rgba(59,130,246,0.06);"></div>
+
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;">
+    <div class="logo"><span class="dot">·</span>Balance<span class="tech">Tech</span></div>
+    <div class="chapter-pill">Measurement & Analytics</div>
+  </div>
+
+  <div style="margin-bottom:32px;">
+    <div class="page-label">Measurement Strategy</div>
+    <h2>From Dry Metrics to<br><span class="accent-word">Full-Funnel Attribution</span></h2>
+    <p class="lead" style="max-width:680px;">We build measurement in two phases — starting with traffic and engagement signals that already justify six-figure monthly spend, then layering in conversion attribution as the ecosystem matures.</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;flex:1;align-items:start;">
+
+    <!-- Phase 1 -->
+    <div style="background:#111827;border:1px solid rgba(59,130,246,0.25);border-radius:14px;padding:28px;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),rgba(59,130,246,0.3));"></div>
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;">
+        <div style="background:var(--accent);color:white;font-family:'Syne',sans-serif;font-size:11px;font-weight:700;border-radius:6px;padding:4px 10px;letter-spacing:1px;">PHASE 1</div>
+        <div style="font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:white;">Engagement Dashboard</div>
+      </div>
+      <div style="font-size:13px;color:var(--dark-muted);line-height:1.6;margin-bottom:18px;">Aggregate traffic from all sources with core "dry metrics" — visibility and engagement signals that already justify hundreds of thousands in monthly spend in the audio/CTV space.</div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:13px;color:white;">Visits & Unique Visitors</span>
+          <span style="font-size:11px;color:var(--accent2);font-weight:600;">Top of Funnel</span>
+        </div>
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:13px;color:white;">CTR by Placement</span>
+          <span style="font-size:11px;color:var(--accent2);font-weight:600;">Engagement Signal</span>
+        </div>
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:13px;color:white;">Video Completion — 25% / 50% / 75% / 100%</span>
+          <span style="font-size:11px;color:var(--accent2);font-weight:600;">Quality Signal</span>
+        </div>
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:13px;color:white;">Average View Duration</span>
+          <span style="font-size:11px;color:var(--accent2);font-weight:600;">Attention Depth</span>
+        </div>
+      </div>
+      <div style="margin-top:14px;padding:10px 14px;background:rgba(59,130,246,0.1);border-radius:8px;font-size:12px;color:var(--dark-muted);">
+        These metrics alone are sufficient to run brand awareness campaigns and justify major CTV/audio budgets with tier-1 brands.
+      </div>
+    </div>
+
+    <!-- Phase 2 -->
+    <div style="background:#111827;border:1px solid rgba(96,165,250,0.35);border-radius:14px;padding:28px;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent2),rgba(96,165,250,0.3));"></div>
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;">
+        <div style="background:rgba(96,165,250,0.2);color:var(--accent2);font-family:'Syne',sans-serif;font-size:11px;font-weight:700;border-radius:6px;padding:4px 10px;letter-spacing:1px;border:1px solid rgba(96,165,250,0.3);">PHASE 2</div>
+        <div style="font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:white;">Conversion Attribution</div>
+      </div>
+      <div style="font-size:13px;color:var(--dark-muted);line-height:1.6;margin-bottom:18px;">Full impression-to-conversion tracking via the remarketing ecosystem — attributing installs and downstream actions to specific CTV touchpoints through cross-device household matching.</div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="background:rgba(96,165,250,0.06);border:1px solid rgba(96,165,250,0.2);border-radius:8px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:13px;color:white;">CTV Impression → Mobile Install</span>
+          <span style="font-size:11px;color:var(--accent2);font-weight:600;">Cross-Device</span>
+        </div>
+        <div style="background:rgba(96,165,250,0.06);border:1px solid rgba(96,165,250,0.2);border-radius:8px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:13px;color:white;">Household-Level Install Attribution</span>
+          <span style="font-size:11px;color:var(--accent2);font-weight:600;">Deterministic</span>
+        </div>
+        <div style="background:rgba(96,165,250,0.06);border:1px solid rgba(96,165,250,0.2);border-radius:8px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:13px;color:white;">First Stream & 7-Day Active Events</span>
+          <span style="font-size:11px;color:var(--accent2);font-weight:600;">Post-Install</span>
+        </div>
+        <div style="background:rgba(96,165,250,0.06);border:1px solid rgba(96,165,250,0.2);border-radius:8px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:13px;color:white;">Incremental Lift — Holdout Testing</span>
+          <span style="font-size:11px;color:var(--accent2);font-weight:600;">Incrementality</span>
+        </div>
+        <div style="background:rgba(96,165,250,0.06);border:1px solid rgba(96,165,250,0.2);border-radius:8px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:13px;color:white;">Fraud Filtering — IVT, Bot Removal</span>
+          <span style="font-size:11px;color:var(--accent2);font-weight:600;">Trust Layer</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bar">
+    <div class="logo"><span class="dot">·</span>Balance<span class="tech">Tech</span></div>
+    <div class="footer-url">www.balancetech.io</div>
+  </div>
+</div>
+
+<!-- ===================== PAGE 9: PERFORMANCE FRAMEWORK ===================== -->
+<div class="page page-blue-tint">
+  <div class="blob" style="width:500px;height:500px;top:-100px;right:-100px;background:rgba(59,130,246,0.06);"></div>
+
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;">
+    <div class="logo"><span class="dot">·</span>Balance<span class="tech">Tech</span></div>
+    <div class="chapter-pill">Performance Framework</div>
+  </div>
+
+  <div style="margin-bottom:36px;">
+    <div class="page-label">Chapter 5</div>
+    <h2>Redefining <span class="accent-word">"Performance"</span><br>for the Living Room</h2>
+    <p class="lead">Install-based CPA was built for mobile. CTV needs its own performance vocabulary — one that maps to how viewers actually engage in the living room.</p>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;flex:1;align-items:start;">
+    <div style="background:#111827;border:1px solid rgba(59,130,246,0.2);border-radius:14px;padding:26px;display:flex;gap:16px;">
+      <div style="width:10px;height:10px;background:var(--accent);border-radius:50%;flex-shrink:0;margin-top:6px;"></div>
+      <div>
+        <h3 class="h3-dark" style="font-size:17px;">Install + Device Activation</h3>
+        <p style="color:var(--dark-muted);font-size:14px;line-height:1.6;margin-top:6px;">App downloaded AND launched on a CTV device. Not just a store install — a verified, real activation signal on the device that matters.</p>
+      </div>
+    </div>
+    <div style="background:#111827;border:1px solid rgba(59,130,246,0.2);border-radius:14px;padding:26px;display:flex;gap:16px;">
+      <div style="width:10px;height:10px;background:var(--accent2);border-radius:50%;flex-shrink:0;margin-top:6px;"></div>
+      <div>
+        <h3 class="h3-dark" style="font-size:17px;">First Stream Completed</h3>
+        <p style="color:var(--dark-muted);font-size:14px;line-height:1.6;margin-top:6px;">Viewer watches meaningful content — not just opens the app. The truest signal of engaged discovery and the start of genuine retention.</p>
+      </div>
+    </div>
+    <div style="background:#111827;border:1px solid rgba(59,130,246,0.2);border-radius:14px;padding:26px;display:flex;gap:16px;">
+      <div style="width:10px;height:10px;background:var(--accent2);border-radius:50%;flex-shrink:0;margin-top:6px;"></div>
+      <div>
+        <h3 class="h3-dark" style="font-size:17px;">7-Day Active Viewer</h3>
+        <p style="color:var(--dark-muted);font-size:14px;line-height:1.6;margin-top:6px;">Sustained engagement that signals real household adoption — the metric that drives CPM uplift, programmatic leverage, and OS algorithm ranking.</p>
+      </div>
+    </div>
+    <div style="background:#111827;border:1px solid rgba(59,130,246,0.2);border-radius:14px;padding:26px;display:flex;gap:16px;">
+      <div style="width:10px;height:10px;background:var(--accent);border-radius:50%;flex-shrink:0;margin-top:6px;"></div>
+      <div>
+        <h3 class="h3-dark" style="font-size:17px;">Subscription / Trial Start</h3>
+        <p style="color:var(--dark-muted);font-size:14px;line-height:1.6;margin-top:6px;">High-intent actions that drive long-term revenue. Measured with household-level incremental lift against holdout groups for clean attribution.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bar">
+    <div class="logo"><span class="dot">·</span>Balance<span class="tech">Tech</span></div>
+    <div class="footer-url">www.balancetech.io</div>
+  </div>
+</div>
+
+<!-- ===================== PAGE 10: HOW WE WORK ===================== -->
+<div class="page page-blue-tint">
+  <div class="blob" style="width:600px;height:600px;bottom:-200px;right:-100px;background:rgba(59,130,246,0.06);"></div>
+
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;">
+    <div class="logo"><span class="dot">·</span>Balance<span class="tech">Tech</span></div>
+    <div class="chapter-pill">How We Work</div>
+  </div>
+
+  <div style="margin-bottom:48px;">
+    <div class="page-label">Chapter 6</div>
+    <h2>We Don't Sell Media Slots.<br><span class="accent-word">We Run Your Growth.</span></h2>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;flex:1;align-items:start;position:relative;">
+    <div style="position:absolute;top:26px;left:52px;right:52px;height:2px;background:linear-gradient(90deg,var(--accent),rgba(59,130,246,0.15));z-index:0;"></div>
+    <div style="padding:0 20px 0 0;position:relative;z-index:1;">
+      <div class="num-badge">01</div>
+      <h3>Discovery</h3>
+      <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">We sit with your team to understand your app, audience, what's been tried, and what success looks like. Partner, not vendor.</p>
+    </div>
+    <div style="padding:0 20px;position:relative;z-index:1;">
+      <div class="num-badge">02</div>
+      <h3>Strategy & Creative</h3>
+      <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">We map a multi-channel growth plan and prepare creative assets — ad formats, copy, and visuals tailored for CTV platforms and cross-device placements.</p>
+    </div>
+    <div style="padding:0 20px;position:relative;z-index:1;">
+      <div class="num-badge">03</div>
+      <h3>Execution</h3>
+      <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">We manage your budget across on-device, cross-device retargeting, creator partnerships, and social — optimizing in real time against your targets.</p>
+    </div>
+    <div style="padding:0 0 0 20px;position:relative;z-index:1;">
+      <div class="num-badge">04</div>
+      <h3>Reporting & Optimization</h3>
+      <p style="color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px;">Clear weekly reporting on installs, watch hours, OS positioning changes, and brand mentions. We adjust every week until we hit the target.</p>
+    </div>
+  </div>
+
+  <div class="footer-bar">
+    <div class="logo"><span class="dot">·</span>Balance<span class="tech">Tech</span></div>
+    <div class="footer-url">www.balancetech.io</div>
+  </div>
+</div>
+
+<!-- ===================== PAGE 11: CASE STUDIES ===================== -->
+<div class="page page-blue-tint">
+  <div class="blob" style="width:600px;height:600px;top:-200px;left:-100px;background:rgba(59,130,246,0.06);"></div>
+
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;">
+    <div class="logo"><span class="dot">·</span>Balance<span class="tech">Tech</span></div>
+    <div class="chapter-pill">Results</div>
+  </div>
+
+  <div style="margin-bottom:36px;">
+    <div class="page-label">Chapter 7</div>
+    <h2>Built on Performance.<br><span class="accent-word">Measured on Outcomes.</span></h2>
+    <p style="color:var(--muted);font-size:15px;margin-top:10px;">Our model is simple: we succeed when you grow.</p>
+  </div>
+
+  <div class="grid-3" style="flex:1;align-items:start;">
+    <div style="background:#111827;border:1px solid rgba(59,130,246,0.25);border-radius:14px;padding:28px;background:linear-gradient(145deg,rgba(59,130,246,0.15) 0%,#111827 100%);">
+      <div style="font-family:'Syne',sans-serif;font-size:52px;font-weight:800;color:var(--accent2);line-height:1;">#1</div>
+      <div style="font-size:12px;color:var(--dark-muted);text-transform:uppercase;letter-spacing:1.5px;margin:4px 0;">Category</div>
+      <div style="font-size:17px;font-weight:600;color:white;margin-bottom:14px;">OS Store Positioning</div>
+      <p style="color:var(--dark-muted);font-size:14px;line-height:1.6;">A FAST channel in the sports vertical went from invisible to featured placement in the Sports category shelf on Roku within 60 days — driving organic discovery alongside paid campaigns.</p>
+      <div style="display:flex;gap:8px;margin-top:18px;flex-wrap:wrap;">
+        <span class="pill pill-dark">FAST</span><span class="pill pill-dark">Sports</span><span class="pill pill-dark">Roku</span>
+      </div>
+    </div>
+    <div style="background:#111827;border:1px solid rgba(59,130,246,0.25);border-radius:14px;padding:28px;background:linear-gradient(145deg,rgba(59,130,246,0.15) 0%,#111827 100%);">
+      <div style="font-family:'Syne',sans-serif;font-size:52px;font-weight:800;color:var(--accent2);line-height:1;">–62%</div>
+      <div style="font-size:12px;color:var(--dark-muted);text-transform:uppercase;letter-spacing:1.5px;margin:4px 0;">Reduction</div>
+      <div style="font-size:17px;font-weight:600;color:white;margin-bottom:14px;">Cost Per Install</div>
+      <p style="color:var(--dark-muted);font-size:14px;line-height:1.6;">By replacing untargeted OS homepage CPM spend with household-matched cross-device video ads, a niche OTT publisher cut their CPI by more than half.</p>
+      <div style="display:flex;gap:8px;margin-top:18px;flex-wrap:wrap;">
+        <span class="pill pill-dark">OTT</span><span class="pill pill-dark">Entertainment</span><span class="pill pill-dark">Apple TV</span>
+      </div>
+    </div>
+    <div style="background:#111827;border:1px solid rgba(59,130,246,0.25);border-radius:14px;padding:28px;background:linear-gradient(145deg,rgba(59,130,246,0.15) 0%,#111827 100%);">
+      <div style="font-family:'Syne',sans-serif;font-size:52px;font-weight:800;color:var(--accent2);line-height:1;">4.1x</div>
+      <div style="font-size:12px;color:var(--dark-muted);text-transform:uppercase;letter-spacing:1.5px;margin:4px 0;">Increase</div>
+      <div style="font-size:17px;font-weight:600;color:white;margin-bottom:14px;">Trial Starts</div>
+      <p style="color:var(--dark-muted);font-size:14px;line-height:1.6;">Creator-driven funnels targeting movie enthusiast audiences drove a 4x increase in subscription trial starts for a premium streaming app.</p>
+      <div style="display:flex;gap:8px;margin-top:18px;flex-wrap:wrap;">
+        <span class="pill pill-dark">SVOD</span><span class="pill pill-dark">Influencer</span><span class="pill pill-dark">Android TV</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bar">
+    <div class="logo"><span class="dot">·</span>Balance<span class="tech">Tech</span></div>
+    <div class="footer-url">www.balancetech.io</div>
+  </div>
+</div>
+
+<!-- ===================== PAGE 12: THE IMPACT WE MAKE ===================== -->
+<div class="page" style="background:#0d1117;padding:56px 80px;">
+  <div class="blob" style="width:700px;height:700px;top:-200px;right:-200px;background:rgba(59,130,246,0.09);"></div>
+  <div class="blob" style="width:400px;height:400px;bottom:-100px;left:0;background:rgba(96,165,250,0.05);"></div>
+
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;position:relative;z-index:2;">
+    <div class="logo logo-light"><span class="dot" style="color:var(--accent2);">·</span>Balance<span style="color:var(--accent2);">Tech</span></div>
+    <div class="chapter-pill chapter-pill-dark">The Impact We Make</div>
+  </div>
+
+  <div style="margin-bottom:40px;position:relative;z-index:2;">
+    <div style="font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent2);margin-bottom:12px;">Chapter 8</div>
+    <h2 class="h2-dark">The Impact We Make<br><span style="color:var(--accent2);">That Sets Us Apart</span></h2>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;flex:1;align-items:start;position:relative;z-index:2;">
+
+    <!-- Left column -->
+    <div style="display:flex;flex-direction:column;gap:20px;">
+      <!-- What differentiates us -->
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(59,130,246,0.2);border-radius:14px;padding:28px;">
+        <div style="font-size:14px;font-weight:600;color:white;margin-bottom:16px;font-family:'Syne',sans-serif;">What Differentiates BalanceTech</div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div style="display:flex;align-items:flex-start;gap:12px;">
+            <div style="width:20px;height:20px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;color:white;flex-shrink:0;margin-top:2px;">✓</div>
+            <div style="font-size:13px;color:var(--dark-muted);line-height:1.5;"><strong style="color:white;">CTV-first agency</strong> — not a media buyer with a CTV add-on. Built from the ground up for this channel.</div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:12px;">
+            <div style="width:20px;height:20px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;color:white;flex-shrink:0;margin-top:2px;">✓</div>
+            <div style="font-size:13px;color:var(--dark-muted);line-height:1.5;"><strong style="color:white;">Household-level targeting</strong> that matches the exact CTV OS to the correct install link — no generic links, ever.</div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:12px;">
+            <div style="width:20px;height:20px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;color:white;flex-shrink:0;margin-top:2px;">✓</div>
+            <div style="font-size:13px;color:var(--dark-muted);line-height:1.5;"><strong style="color:white;">Outcome-priced model</strong> — CPA only. We succeed when you grow. No impressions budget wasted on awareness.</div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:12px;">
+            <div style="width:20px;height:20px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;color:white;flex-shrink:0;margin-top:2px;">✓</div>
+            <div style="font-size:13px;color:var(--dark-muted);line-height:1.5;"><strong style="color:white;">10+ years CTV operations</strong> — we've built, scaled, and monetized streaming apps. We know the platform from the inside.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trusted by / awards row -->
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:24px;">
+        <div style="font-size:11px;font-weight:600;color:var(--dark-muted);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:14px;">Platform Expertise</div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:9px 16px;font-size:13px;font-weight:600;color:var(--dark-muted);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/></svg> Roku</div>
+          <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:9px 16px;font-size:13px;font-weight:600;color:var(--dark-muted);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 3z"/></svg> Fire TV</div>
+          <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:9px 16px;font-size:13px;font-weight:600;color:var(--dark-muted);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.94c1.5 0 4-1.73 4-6.94 0-4-1.5-6-4-6s-4 2-4 6c0 5.21 2.5 6.94 4 6.94z"/><path d="M12 8V2"/></svg> Apple TV</div>
+          <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:9px 16px;font-size:13px;font-weight:600;color:var(--dark-muted);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8" y2="16"/><line x1="16" y1="16" x2="16" y2="16"/></svg> Android TV</div>
+        </div>
+        <div style="font-size:13px;color:var(--dark-muted);margin-top:14px;line-height:1.5;">MMP integrations with Adjust, AppsFlyer & Branch. Attribution via household graph + deterministic matching.</div>
+      </div>
+    </div>
+
+    <!-- Right column: Impact stats -->
+    <div style="display:flex;flex-direction:column;gap:16px;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div style="background:rgba(59,130,246,0.12);border:1px solid rgba(59,130,246,0.3);border-radius:14px;padding:22px;">
+          <div class="impact-stat">–62%</div>
+          <div class="impact-label">Cost Per Install</div>
+          <div class="impact-desc">Household-matched video vs. untargeted OS CPM spend</div>
+        </div>
+        <div style="background:rgba(59,130,246,0.12);border:1px solid rgba(59,130,246,0.3);border-radius:14px;padding:22px;">
+          <div class="impact-stat">4.1x</div>
+          <div class="impact-label">Trial Start Lift</div>
+          <div class="impact-desc">Creator funnel campaigns vs. standard CTV brand campaigns</div>
+        </div>
+        <div style="background:rgba(59,130,246,0.12);border:1px solid rgba(59,130,246,0.3);border-radius:14px;padding:22px;">
+          <div class="impact-stat">60d</div>
+          <div class="impact-label">To #1 Category</div>
+          <div class="impact-desc">Time to featured OS shelf placement for FAST sports channel</div>
+        </div>
+        <div style="background:rgba(59,130,246,0.12);border:1px solid rgba(59,130,246,0.3);border-radius:14px;padding:22px;">
+          <div class="impact-stat">200%+</div>
+          <div class="impact-label">Conversion Lift</div>
+          <div class="impact-desc">Cross-device retargeting vs. CTV-only campaign strategies</div>
+        </div>
+      </div>
+      <!-- Quote highlight -->
+      <div style="background:linear-gradient(135deg,rgba(59,130,246,0.15),rgba(30,45,69,0.9));border:1px solid rgba(59,130,246,0.35);border-radius:14px;padding:24px;">
+        <div style="font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:white;line-height:1.5;margin-bottom:12px;">"CTV is the last major screen without a performance playbook. The operator who builds it wins."</div>
+        <div style="font-size:12px;color:var(--accent2);text-transform:uppercase;letter-spacing:1.5px;font-weight:600;">— BalanceTech Founding Thesis</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bar" style="border-top-color:rgba(255,255,255,0.08);">
+    <div class="logo logo-light"><span class="dot" style="color:var(--accent2);">·</span>Balance<span style="color:var(--accent2);">Tech</span></div>
+    <div class="footer-url">www.balancetech.io</div>
+  </div>
+</div>
+
+<!-- ===================== PAGE 13: CTA ===================== -->
+<div class="page" style="background:#0d1117;justify-content:center;align-items:center;text-align:center;">
+  <div class="blob" style="width:800px;height:800px;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(59,130,246,0.07);"></div>
+
+  <div style="position:relative;z-index:1;max-width:780px;">
+    <div style="font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent2);margin-bottom:20px;display:inline-block;">Get Started</div>
+    <h1 class="h1-dark" style="font-size:60px;margin-bottom:22px;">Ready to <span style="color:var(--accent2);">Grow</span><br>Your CTV App?</h1>
+    <p style="font-size:17px;color:var(--dark-muted);line-height:1.7;margin-bottom:44px;">Tell us about your app and we'll map out a growth plan — no commitments. We work on Roku, Apple TV, Fire TV, and Android TV.</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;margin-bottom:44px;">
+      <div style="background:#111827;border:1px solid rgba(59,130,246,0.2);border-radius:12px;padding:24px;text-align:left;">
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.06);">
+          <span style="font-size:13px;color:var(--dark-muted);">Pricing Model</span>
+          <span style="font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--accent2);">CPA</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.06);">
+          <span style="font-size:13px;color:var(--dark-muted);">Min. Budget</span>
+          <span style="font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--accent2);">$10K/mo</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;">
+          <span style="font-size:13px;color:var(--dark-muted);">Contract</span>
+          <span style="font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--accent2);">Flexible</span>
+        </div>
+      </div>
+      <div style="background:#111827;border:1px solid rgba(59,130,246,0.2);border-radius:12px;padding:24px;text-align:left;">
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.06);">
+          <span style="font-size:13px;color:var(--dark-muted);">Onboarding</span>
+          <span style="font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--accent2);">2 weeks</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.06);">
+          <span style="font-size:13px;color:var(--dark-muted);">Platforms</span>
+          <span style="font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--accent2);">4 OS</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;">
+          <span style="font-size:13px;color:var(--dark-muted);">Reporting</span>
+          <span style="font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--accent2);">Weekly</span>
+        </div>
+      </div>
+      <div style="background:linear-gradient(135deg,rgba(59,130,246,0.2),rgba(30,45,69,0.9));border:1px solid rgba(59,130,246,0.4);border-radius:12px;padding:24px;text-align:left;">
+        <div style="font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:white;margin-bottom:14px;">Get in Touch</div>
+        <div style="font-size:14px;color:var(--accent2);margin-bottom:8px;">hello@balancetech.io</div>
+        <div style="font-size:14px;color:var(--accent2);margin-bottom:12px;">www.balancetech.io</div>
+        <div style="font-size:12px;color:var(--dark-muted);">We respond within 24 hours.</div>
+      </div>
+    </div>
+
+    <div style="display:inline-flex;align-items:center;gap:16px;">
+      <div class="logo logo-light" style="font-size:22px;"><span class="dot" style="color:var(--accent2);">·</span>Balance<span style="color:var(--accent2);">Tech</span></div>
+      <span style="color:rgba(255,255,255,0.2);">|</span>
+      <span style="font-size:14px;color:var(--dark-muted);">Performance UA for CTV Publishers</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
